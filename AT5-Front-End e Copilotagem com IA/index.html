@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pausa Digital — Conectando Bem-Estar e Tecnologia</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm" aria-label="Navegação Principal">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <span class="brand-icon">🌿</span>
+        <strong>Pausa Digital</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Alternar menu de navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+          <li class="nav-item"><a class="nav-link" href="#questionario">Hábitos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#painel">Veredito</a></li>
+          <li class="nav-item"><a class="nav-link" href="#simulador">Simulador</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">Dúvidas</a></li>
+          <li class="nav-item ms-lg-2">
+            <button id="btn-theme" class="btn btn-outline-custom btn-sm rounded-pill px-3" aria-label="Alternar tema claro e escuro">
+              🌙 Tema Escuro
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <header class="hero-section text-center py-5">
+    <div class="container py-4">
+      <span class="badge rounded-pill bg-light-custom mb-3 px-3 py-2 fs-6">Autonomia & Autopercepção</span>
+      <h1 class="display-4 fw-bold mb-3">Recupere a liberdade de escolher como utilizar seu tempo</h1>
+      <p class="lead max-w-750 mx-auto mb-4 text-secondary-custom">
+        Uma ferramenta simples, transparente e sem julgamentos para você avaliar seu uso diário de telas e descobrir novas possibilidades.
+      </p>
+      <a href="#questionario" class="btn btn-primary-custom btn-lg px-4 rounded-pill">Começar Avaliação</a>
+    </div>
+  </header>
+
+  <main>
+    
+    <section id="questionario" class="py-5">
+      <div class="container">
+        <div class="card card-custom p-4 p-md-5 border-0 shadow-lg mx-auto max-w-750">
+          <h2 class="h3 fw-bold mb-4 text-center">1. Seus Hábitos Diários</h2>
+          <form id="form-habitos">
+            <div class="mb-4">
+              <label for="horas-diarias" class="form-label fw-semibold">Quantas horas por dia você estima passar no celular?</label>
+              <input type="number" class="form-control form-control-lg" id="horas-diarias" min="0" max="24" step="0.5" placeholder="Ex: 4" required>
+            </div>
+
+            <div class="mb-4">
+              <label for="tipo-app" class="form-label fw-semibold">Qual categoria consome a maior parte desse tempo?</label>
+              <select class="form-select form-select-lg" id="tipo-app" required>
+                <option value="" disabled selected>Selecione uma opção...</option>
+                <option value="redes">Redes Sociais (Instagram, TikTok, X)</option>
+                <option value="trabalho">Trabalho / Comunicação (Emails, Teams, Slack)</option>
+                <option value="videos">Vídeos e Streaming (YouTube, Netflix)</option>
+                <option value="jogos">Jogos / Entretenimento</option>
+              </select>
+            </div>
+
+            <div class="mb-4">
+              <label for="intencionalidade" class="form-label fw-semibold">Como você percebe esse uso na maioria das vezes?</label>
+              <select class="form-select form-select-lg" id="intencionalidade" required>
+                <option value="" disabled selected>Selecione uma opção...</option>
+                <option value="ativa">Escolha ativa (Uso intencional para tarefas ou lazer)</option>
+                <option value="automatica">Modo automático (Rolagem sem perceber o tempo passar)</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary-custom btn-lg w-100 rounded-pill mt-2">Calcular Veredito</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="painel" class="py-5 d-none">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="badge rounded-pill bg-light-custom mb-2 px-3 py-2 fs-6">Seus Resultados</span>
+          <h2 class="display-6 fw-bold">Estimativa de Tempo e Veredito</h2>
+        </div>
+
+        <div class="row g-4 mb-5">
+        
+          <div class="col-md-4">
+            <div class="card card-custom h-100 p-4 border-0 shadow-sm text-center">
+              <span class="fs-4 mb-2">📅</span>
+              <h3 class="h6 text-uppercase tracking-wide text-secondary-custom">Uso Diário</h3>
+              <p id="metrica-dia" class="display-6 fw-bold text-accent mb-0">0h</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-custom h-100 p-4 border-0 shadow-sm text-center">
+              <span class="fs-4 mb-2">🗓️</span>
+              <h3 class="h6 text-uppercase tracking-wide text-secondary-custom">Uso Semanal</h3>
+              <p id="metrica-semana" class="display-6 fw-bold text-accent mb-0">0h</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card card-custom h-100 p-4 border-0 shadow-sm text-center">
+              <span class="fs-4 mb-2">🗓️</span>
+              <h3 class="h6 text-uppercase tracking-wide text-secondary-custom">Uso Mensal</h3>
+              <p id="metrica-mes" class="display-6 fw-bold text-accent mb-0">0h</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 align-items-center">
+        
+          <div class="col-lg-6">
+            <div class="card card-custom p-4 border-0 shadow-sm">
+              <h3 class="h5 fw-bold mb-3 text-center">Proporção no Seu Dia (24h)</h3>
+              <div class="chart-container mx-auto" style="position: relative; height:260px; width:100%; max-width:320px;">
+                <canvas id="graficoUso"></canvas>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="card card-custom p-4 p-md-5 border-0 shadow-sm">
+              <span id="badge-perfil" class="badge bg-secondary mb-3 align-self-start px-3 py-2 fs-6">Perfil</span>
+              <h3 id="titulo-veredito" class="h4 fw-bold mb-3">Seu Veredito</h3>
+              <p id="texto-veredito" class="lead fs-6 text-secondary-custom mb-0">
+                Preencha o formulário para visualizar a análise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="simulador" class="py-5 bg-surface-custom">
+      <div class="container">
+        <div class="max-w-750 mx-auto text-center mb-4">
+          <h2 class="h3 fw-bold mb-2">Simulador de Tempo Recuperável</h2>
+          <p class="text-secondary-custom">Veja quanto tempo você ganha de volta na sua vida fazendo pequenos ajustes na rotina.</p>
+        </div>
+
+        <div class="card card-custom p-4 p-md-5 border-0 shadow-lg mx-auto max-w-750">
+          <div class="mb-4">
+            <label for="select-meta" class="form-label fw-semibold">Quanto tempo por dia você gostaria de experimentar reduzir?</label>
+            <select id="select-meta" class="form-select form-select-lg">
+              <option value="15">15 minutos por dia</option>
+              <option value="30" selected>30 minutos por dia</option>
+              <option value="60">60 minutos por dia</option>
+            </select>
+          </div>
+
+          <div class="row text-center g-3 mb-4">
+            <div class="col-6">
+              <div class="p-3 border rounded-3 bg-body">
+                <small class="text-secondary-custom d-block">Em 7 dias você recupera:</small>
+                <strong id="recuperado-semana" class="fs-4 text-accent">3h 30min</strong>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 border rounded-3 bg-body">
+                <small class="text-secondary-custom d-block">Em 30 dias você recupera:</small>
+                <strong id="recuperado-mes" class="fs-4 text-accent">15h 00min</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-2">
+            <h3 class="h6 fw-bold text-uppercase tracking-wide mb-3 text-secondary-custom">O que dá para fazer com esse tempo?</h3>
+            <ul class="list-unstyled d-flex flex-column gap-2 mb-0">
+              <li class="d-flex align-items-center gap-2">✨ <span>Aprender ou praticar uma nova habilidade.</span></li>
+              <li class="d-flex align-items-center gap-2">🚴 <span>Fazer caminhadas ao ar livre (Alinhado à OMS 2020).</span></li>
+              <li class="d-flex align-items-center gap-2">📚 <span>Ler livros impressos ou focar nos estudos.</span></li>
+              <li class="d-flex align-items-center gap-2">👥 <span>Encontrar amigos e familiares presencialmente.</span></li>
+              <li class="d-flex align-items-center gap-2">😴 <span>Descansar com qualidade sem telas (Eurofound 2023).</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  
+    <section id="timer-pausa" class="py-5">
+      <div class="container">
+        <div class="card card-custom p-4 p-md-5 border-0 shadow-lg mx-auto max-w-750 text-center">
+          <span class="badge rounded-pill bg-light-custom mb-2 px-3 py-2 fs-6 mx-auto">Prática Imediata</span>
+          <h2 class="h3 fw-bold mb-3">Desafio de 15 Minutos de Pausa</h2>
+          <p class="text-secondary-custom mb-4">Que tal testar agora mesmo? Afaste-se da tela por 15 minutos e respire, caminhe ou descanse.</p>
+          
+          <div id="display-timer" class="display-3 fw-bold text-accent mb-4">15:00</div>
+          
+          <div class="d-flex justify-content-center gap-3">
+            <button id="btn-iniciar-timer" class="btn btn-primary-custom px-4 rounded-pill">Iniciar Pausa</button>
+            <button id="btn-resetar-timer" class="btn btn-outline-custom px-4 rounded-pill">Zerar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Dica Rápida de Bem-Estar (Microlearning) -->
+    <section id="dica-dia" class="py-5">
+      <div class="container">
+        <div class="card card-custom p-4 p-md-5 border-0 shadow-lg mx-auto max-w-750 text-center">
+          <span class="badge rounded-pill bg-light-custom mb-2 px-3 py-2 fs-6 mx-auto">Pílula de Consciência</span>
+          <h2 class="h3 fw-bold mb-3">Dica do Dia para sua Relação com as Telas</h2>
+          <p id="texto-dica" class="lead fs-6 text-secondary-custom mb-4">
+            "Experimentar o tédio de vez em quando é essencial para estimular a criatividade e dar descanso ao córtex prefrontal."
+          </p>
+          <button id="btn-nova-dica" class="btn btn-outline-custom px-4 rounded-pill mx-auto">Sortear Outra Dica</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Histórico Local de Avaliações -->
+    <section id="historico" class="py-5 bg-surface-custom">
+      <div class="container max-w-750">
+        <div class="text-center mb-4">
+          <h2 class="h3 fw-bold mb-2">Seu Histórico de Registros</h2>
+          <p class="text-secondary-custom">Acompanhe as últimas avaliações salvas diretamente no seu navegador.</p>
+        </div>
+        <div class="card card-custom p-4 border-0 shadow-sm">
+          <ul id="lista-historico" class="list-group list-group-flush">
+            <li class="list-group-item bg-transparent text-secondary-custom text-center">Nenhum registro salvo ainda. Preencha o questionário acima!</li>
+          </ul>
+          <button id="btn-limpar-historico" class="btn btn-sm btn-outline-danger mt-3 align-self-start rounded-pill d-none">Limpar Histórico</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="py-5">
+      <div class="container max-w-750">
+        <h2 class="h3 fw-bold mb-4 text-center">Dúvidas Frequentes</h2>
+        <div class="accordion accordion-custom shadow-sm" id="accordionFAQ">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                Essa aplicação faz algum diagnóstico médico ou psicológico?
+              </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                <strong>Não.</strong> O Pausa Digital não realiza diagnósticos clínicos nem rotula comportamentos. Todos os números exibidos são estimativas pedagógicas baseadas nas informações fornecidas por você, visando apenas à autopercepção.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                Meus dados estão seguros nesta plataforma?
+              </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#accordionFAQ">
+              <div class="accordion-body">
+                <strong>Totalmente.</strong> Respeitamos sua privacidade. Nenhuma informação digitada é enviada a servidores externos ou compartilhada. Tudo é processado localmente no seu próprio navegador.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="footer py-4 text-center border-top">
+    <div class="container">
+      <p class="mb-1">Pausa Digital © 2026 — Projeto Acadêmico (Front-End & Copilotagem com IA)</p>
+      <small class="text-secondary-custom">Orientação: Prof. Diego Marques de Carvalho</small>
+    </div>
+  </footer>
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Script Autoral -->
+  <script src="script.js"></script>
+</body>
+</html>

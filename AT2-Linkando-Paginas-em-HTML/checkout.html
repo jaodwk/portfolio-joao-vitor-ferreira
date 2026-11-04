@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CHECKOUT</title>
+</head>
+<body>
+    <header>
+        <h1>AuraGames</h1>
+        <h2 class="subtitulo">Conclua sua compra</h2>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="home.html"><strong>PÁGINA INICIAL</strong></a>
+            </li>
+            <li>
+                <a href="produtos.html"><strong>PRODUTOS</strong></a>
+            </li>
+            <li>
+                <a href="checkout.html"><strong>CHECKOUT</strong></a>
+            </li>
+            <li>
+                <a href="quem_somos.html"><strong>QUEM SOMOS</strong></a>
+            </li>
+            <li>
+                <a href="contato.html"><strong>CONTATO</strong></a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+    <h2 class="finalizar">Finalizar Pedido</h2>
+
+    <form class="checkout-form">
+        <fieldset>
+            <legend>Dados de Entrega</legend>
+            
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+
+            <label for="endereco">Endereço de Entrega:</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Rua, número e bairro" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Forma de Pagamento</legend>
+            
+            <div class="pagamento-opcao">
+                <input type="radio" id="pix" name="pagamento" value="pix" checked>
+                <label for="pix">PIX (Aprovação imediata)</label>
+            </div>
+
+            <div class="pagamento-opcao">
+                <input type="radio" id="cartao" name="pagamento" value="cartao">
+                <label for="cartao">Cartão de Crédito</label>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn-finalizar">Confirmar</button>
+    </form>
+</main>
+    <footer>
+         <p>&copy; 2026 AuraGames — Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

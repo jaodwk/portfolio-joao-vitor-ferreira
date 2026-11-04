@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+:root {
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --bg-body: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-alt: #f1f5f9;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --border-color: #e2e8f0;
+  --primary: #0d9488;
+  --primary-hover: #0f766e;
+  --accent: #0284c7;
+  --badge-bg: #ccfbf1;
+  --badge-text: #0f766e;
+}
+
+[data-theme="dark"] {
+  --bg-body: #0f172a;
+  --bg-surface: #1e293b;
+  --bg-surface-alt: #0f172a;
+  --text-main: #f8fafc;
+  --text-muted: #cbd5e1;
+  --border-color: #334155;
+  --primary: #14b8a6;
+  --primary-hover: #2dd4bf;
+  --accent: #38bdf8;
+  --badge-bg: #115e59;
+  --badge-text: #ccfbf1;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.max-w-750 {
+  max-width: 750px;
+}
+
+.text-secondary-custom {
+  color: var(--text-muted) !important;
+}
+
+.text-accent {
+  color: var(--primary) !important;
+}
+
+.bg-surface-custom {
+  background-color: var(--bg-surface-alt);
+}
+
+.bg-light-custom {
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+}
+
+.navbar {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+}
+.navbar-brand, .nav-link {
+  color: var(--text-main) !important;
+}
+
+.btn-primary-custom {
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+.btn-primary-custom:hover, .btn-primary-custom:focus-visible {
+  background-color: var(--primary-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+.btn-outline-custom:hover {
+  background-color: var(--bg-surface-alt);
+  color: var(--text-main);
+}
+
+.card-custom {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color) !important;
+  border-radius: 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-custom:hover {
+  transform: translateY(-4px);
+}
+
+.form-control, .form-select {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border-color: var(--border-color);
+}
+.form-control:focus, .form-select:focus {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.25rem rgba(13, 148, 136, 0.25);
+}
+
+.accordion-item {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+.accordion-button {
+  background-color: var(--bg-surface);
+  color: var(--text-main);
+}
+.accordion-button:not(.collapsed) {
+  background-color: var(--bg-surface-alt);
+  color: var(--primary);
+}
+
+.footer {
+  background-color: var(--bg-surface);
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .form-label,
+[data-theme="dark"] .card-custom h2,
+[data-theme="dark"] .card-custom h3,
+[data-theme="dark"] #simulador p,
+[data-theme="dark"] #simulador li,
+[data-theme="dark"] #simulador span,
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: var(--text-muted) !important;
+  opacity: 0.8;
+}
+
+[data-theme="dark"] #simulador .text-secondary-custom {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] #lista-historico .list-group-item {
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] #lista-historico span {
+  color: var(--text-main) !important;
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Saúde & Bem-Estar</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacao" aria-controls="menuNavegacao" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="menuNavegacao">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="galeria.html">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dados.html">Dados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="container text-center my-4">
+        <h1>Galeria de hábitos</h1>
+        <p>Melhore sua rotina com esses hábitos</p>
+    </header>
+
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/habito1.png" class="card-img-top" alt="Alimentação Saudável">
+                    <div class="card-body">
+                        <h5 class="card-title">Alimentação Saudável</h5>
+                        <p class="card-text">Nutrir o corpo com alimentos de verdade impacta diretamente seu humor e energia.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalHabito1">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalHabito1" tabindex="-1" aria-labelledby="labelHabito1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="labelHabito1">Tenha uma Alimentação Saudável</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Priorize alimentos naturais, evite ultraprocessados e mantenha uma rotina de refeições regrada para melhorar a concentração e reduzir a ansiedade.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/habito2.jpg" class="card-img-top" alt="Prática de Exercícios">
+                    <div class="card-body">
+                        <h5 class="card-title">Prática de Exercícios</h5>
+                        <p class="card-text">Exercitar o corpo é o mesmo que exercitar a mente.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalHabito2">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalHabito2" tabindex="-1" aria-labelledby="labelHabito2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="labelHabito2">Exercitar o corpo é manter a mente viva.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>A prática regular de atividades físicas fortalece o corpo, melhora o humor, reduz o estresse e contribui para a saúde mental. Movimentar-se é uma forma de cuidar de si mesmo, aumentar a disposição e promover mais equilíbrio e qualidade de vida. Afinal, cuidar do corpo também é cuidar da mente.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/habito3.jpg" class="card-img-top" alt="Higiene do Sono">
+                    <div class="card-body">
+                        <h5 class="card-title">Higiene do Sono</h5>
+                        <p class="card-text">Sempre descansar e se recompor para seguir em frente!</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalHabito3">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalHabito3" tabindex="-1" aria-labelledby="labelHabito3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="labelHabito3">Um ótimo descanso pode te oferecer coisas boas.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Uma boa noite de sono ajuda a regular as emoções, fortalece a memória e reduz o estresse. Criar uma rotina de descanso é essencial para a saúde mental, uma mente descansada é uma mente firme!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/habito4.jpg" class="card-img-top" alt="Meditação & Mindfulness">
+                    <div class="card-body">
+                        <h5 class="card-title">Meditação & Mindfulness</h5>
+                        <p class="card-text">A meditação e o mindfulness são práticas que ajudam a acalmar a mente, reduzir o estresse e desenvolver a atenção plena.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalHabito4">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalHabito4" tabindex="-1" aria-labelledby="labelHabito4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="labelHabito4">Elas ensinam a prestar atenção ao momento presente, aos pensamentos, às emoções e à respiração, sem julgamentos.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Você não precisa esvaziar a mente. O objetivo é aprender a observar os pensamentos com mais tranquilidade e consciência. Pequenos momentos de atenção plena podem contribuir para uma rotina mais saudável e equilibrada.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/habito5.jpg" class="card-img-top" alt="Hidratação Constante">
+                    <div class="card-body">
+                        <h5 class="card-title">Hidratação Constante</h5>
+                        <p class="card-text">A hidratação constante é um hábito essencial para manter o corpo e a mente saudáveis.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalHabito5">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalHabito5" tabindex="-1" aria-labelledby="labelHabito5" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="labelHabito5">Evitar a desidratação ajuda a preservar a atenção e o desempenho cognitivo.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Deixe uma garrafa de água na mesa e estabeleça pequenos lembretes ao longo do dia. A quantidade ideal varia conforme o peso, a atividade física, o clima e as condições de saúde.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="img/habito6.jpg" class="card-img-top" alt="Conexão Social e Lazer">
+                    <div class="card-body">
+                        <h5 class="card-title">Conexão Social e Lazer</h5>
+                        <p class="card-text">Cultivar relacionamentos saudáveis e reservar tempo para atividades prazerosas são hábitos importantes para o bem-estar emocional.</p>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalHabito6">
+                            Ver mais detalhes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalHabito6" tabindex="-1" aria-labelledby="labelHabito6" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="labelHabito6">Dedique parte do seu tempo a interações presenciais e experiências fora do ambiente digital.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Aproxime-se de quem faz bem, compartilhe bons momentos e permita-se momentos de lazer e descontração longe das telas.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-success text-white text-center py-3 mt-4">
+        <p>&copy; 2026 - Saúde Mental e Hábitos Saudáveis</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

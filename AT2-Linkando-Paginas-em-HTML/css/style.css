@@ -1,0 +1,236 @@
+body{
+   background-color: #121214;
+}
+
+header{
+    background-color: #121214;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 100px;
+    color: #a855f7;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2.3rem
+}
+
+.subtitulo{
+    font-size: 1.5rem;
+    color: white
+}
+
+ul{
+    text-align: center;
+    list-style: none;
+    display: flex;        
+    justify-content: center; 
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #1a1a1e;
+}
+
+li{
+    padding: 25px;
+}
+
+nav{
+    width: 90%;
+    max-width: 1200px;
+    height: 120px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: #1a1a1e;
+    text-align: center;
+}
+
+nav ul li a{
+    color: #a855f7;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #c895fc;
+}
+
+main{
+    width: 90%;
+    max-width: 1200px;
+    min-height: 400px;
+    margin: 0 auto;
+    padding-bottom: 15px; 
+    padding-top: 15px;
+    background-color: #1a1a1e;
+    color: #a855f7;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.foto-banner{
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: 0 15px 20px rgba(168, 85, 247, 0.2);
+}
+
+.foto-menor{
+    max-width: 720px;
+    min-width: 720px;
+    display: block;
+    margin: 30px auto;
+    height: auto;   
+    box-shadow: 0 15px 20px rgba(168, 85, 247, 0.2);
+}
+
+.beneficios{
+    display: flex;
+    justify-content: space-around;
+    background-color: #1f1f24;
+    padding: 20px;
+    margin: 40px auto;
+}
+.beneficio-item{
+    text-align: center;
+    padding: 10px;
+}
+
+.beneficio-item h3{
+    color: #a855f7;
+    margin-bottom: 5px;
+    font-size: 1.6rem;
+}
+
+.beneficio-item p{
+    color: #a1a1aa;
+    font-size: 1.2rem;
+}
+.nome{
+    font-size: 1.2rem;
+    color: #e0e0e4;
+}
+.finalizar{
+    color: #e0e0e4;
+}
+.checkout-form{
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1a1a1e;
+    border: 1px solid #33333e;
+    border-radius: 8px;
+}
+fieldset{
+    border: 1px solid #2d2d35;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+legend{
+    color: #a855f7;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+.checkout-form label{
+    display: block;
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+.checkout-form input[type="text"],
+.checkout-form input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #121214;
+    border: 1px solid #33333e;
+    border-radius: 4px;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.checkout-form input:focus{
+    outline: none;
+    border-color: #a855f7;
+}
+
+.pagamento-opcao{
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+.btn-finalizar{
+    width: 100%;
+    background-color: #a855f7;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-finalizar:hover{
+    background-color: #9333ea;
+}
+
+.card-texto {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #1a1a1e;
+    border: 1px solid #33333e;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.card-texto h2 {
+    color: #a855f7;
+    margin-bottom: 15px;
+}
+
+.card-texto p {
+    color: #e4e4e7;
+    margin-bottom: 15px;
+}
+
+.checkout-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #121214;
+    border: 1px solid #33333e;
+    border-radius: 4px;
+    color: #ffffff;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.checkout-form textarea:focus {
+    outline: none;
+    border-color: #a855f7;
+}
+
+::placeholder {
+    color: #71717a;
+    opacity: 1;
+}
+
+footer{
+    background-color: #0d0d0f;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 1px solid #222;
+    color: #71717a;
+    font-size: 0.90rem;
+}
